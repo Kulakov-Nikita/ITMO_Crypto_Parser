@@ -8,6 +8,7 @@ x-airflow-common: &airflow-common
     AIRFLOW__CORE__LOAD_EXAMPLES: "false"
     # Чтобы Airflow видел DAG-и быстрее при разработке
     AIRFLOW__SCHEDULER__DAG_DIR_LIST_INTERVAL: "10"
+    API_TOKEN: ${API_TOKEN}
   volumes:
     - ./dags:/opt/airflow/dags
     - ./data:/opt/airflow/data
